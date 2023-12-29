@@ -14,6 +14,11 @@ public class App {
     }
 
     public static void main(String[] args) {
+        // This could be an API endpoint, or literally anything.
+        // It just have to use the BookService.
+        // If we did that in Spring, then we would just have the configuration with
+        // proper database and outer service injection.
+
         var memory = new InMemoryBookRepository();
         var adapter = new MockSyncAdapter();
         var service = new BooksService(memory, adapter);
